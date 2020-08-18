@@ -64,15 +64,15 @@ public class Student {
     public void payTuition() {
     	viewBalance();
     	
-    	Scanner mine = new Scanner(System.in);
+    	@SuppressWarnings("resource")
+		Scanner mine = new Scanner(System.in);
     	System.out.print("How much would you like to pay?: ");
     	int payment = mine.nextInt();
     	
     	tuitionBalance -= payment;
     	System.out.println("Amount paid: "+payment);
     	viewBalance();
-    	
-    	mine.close();
+    	   	
     }
     
     public void showInfo() {
